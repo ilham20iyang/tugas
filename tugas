@@ -1,0 +1,32 @@
+#Class Utama
+class Kota:
+    def __init__(self, M, G, P, S, H, I):
+        self.M = M
+        self.G = G
+        self.P = P
+        self.S = S
+        self.H = H
+        self.I = I
+    def Daftar_kota(self):
+        print("Daftar_kota : ", self.M, self.G, self.P ,self.S,self.H,self.I )
+#SubCalls 1
+class Prov (Kota):
+    def __init__(self, M, G, P, S, H, I, ):
+        Kota.__init__(self,  M, G, P, S, H, I,)
+        self.SS = "Sulawesi Selatan"
+    def Nama_prov(self):
+        print("Asal Provinsi  : ", self.SS)
+def main():
+    Daftar = Prov("pinrang,", "parepare,", "Barru,", "Pangkep,","Maros,","Makassar")
+
+    Daftar.Daftar_kota()
+
+    Daftar.Nama_prov()
+
+    print("________________________________________________________________")
+    print("- - - - - - - - - - - - - - - - - - - - - - - -")
+    print("Ibu kota Sulawesi selatan adalah Makassar")
+    print("- - - - - - - - - - - - - - - - - - - - - - - -")
+
+if __name__ == "__main__":
+        main()
